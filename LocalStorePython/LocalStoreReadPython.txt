@@ -1,0 +1,5 @@
+!wget <yourURLToData> -N
+!pwd
+# To determine <yourPath>
+<yourRDDName> = sc.textFile("<yourPath>/<yourFiles>")
+<yourRDDName>.take(3)
