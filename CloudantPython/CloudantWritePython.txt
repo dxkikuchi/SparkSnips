@@ -1,0 +1,6 @@
+<yourDataFrameName>.write.format("com.cloudant.spark").\
+option("cloudant.host","<yourhost>").\
+option("cloudant.username", "<yourUsername>").\
+option("cloudant.password", "<yourPassword>").\
+save("<yourCloudantDatabaseName>")
+# Note Cloudant Data Base Name must already exist

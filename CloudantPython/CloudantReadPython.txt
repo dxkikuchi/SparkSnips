@@ -1,0 +1,7 @@
+<yourDataFrameName> = sqlContext.read.format("com.cloudant.spark").\
+option("cloudant.host","<yourHost>").\
+option("cloudant.username", "<yourUsername>").\
+option("cloudant.password", "<yourPassword>").\
+load("<yourCloudantDatabaseName>")
+<yourDataFrameName>.printSchema()
+<yourDataFrameName>.count()
