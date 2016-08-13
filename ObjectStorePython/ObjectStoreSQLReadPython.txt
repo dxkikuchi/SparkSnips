@@ -1,0 +1,7 @@
+from pyspark.sql import SQLContext
+sqlContext = SQLContext(sc)
+<yourDataFrameName> = sqlContext.read.format('com.databricks.spark.csv').options(header='true',inferschema='true').load('swift://notebooks.spark/<yourFiles>')
+<yourDataFrameName>.printSchema()
+<yourDataFrameName>.registerTempTable("<yourTableName")
+# This assumes that the Object Store is associated with this Spark service
+# This assumes a csv files with a header
