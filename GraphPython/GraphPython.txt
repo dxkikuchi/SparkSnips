@@ -1,0 +1,4 @@
+%matplotlib inline 
+import matplotlib.pyplot as plt, numpy as np
+<yourPandasDF> = <yourDataFrameName>.toPandas()
+<yourPandasDF>.plot(kind='bar', x='<yourXAxisVariable>', y='<yourYAxisVariable>', figsize=(12, 5))
