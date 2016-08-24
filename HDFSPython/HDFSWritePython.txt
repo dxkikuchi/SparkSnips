@@ -1,0 +1,2 @@
+# Writes file from local to HDFS /tmp on BigInsights on Cloud
+!curl -i -v -L -k -s --user <yourUserID>:<yourPassword> --max-time 45 -X PUT -T <yourLocalFile> https://bi-hadoop-prod-<yourClusterNumber>.bi.services.us-south.bluemix.net:8443/gateway/default/webhdfs/v1/tmp/<yourHDFSFileName>?op=CREATE

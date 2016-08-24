@@ -1,0 +1,2 @@
+# Retrieves listing for HDFS /user from BigInsights on Cloud
+curl -i -k -s --user <yourUserID>:<yourPassword> --max-time 45 https://bi-hadoop-prod-<yourClusterNumber>.bi.services.us-south.bluemix.net:8443/gateway/default/webhdfs/v1/user?op=LISTSTATUS
