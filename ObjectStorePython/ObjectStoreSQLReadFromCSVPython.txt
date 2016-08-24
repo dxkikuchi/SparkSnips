@@ -5,3 +5,7 @@ sqlContext = SQLContext(sc)
 <yourDataFrameName> = sqlContext.read.format('com.databricks.spark.csv').options(header='true',inferschema='true').load('swift://notebooks.spark/<yourFiles>')
 <yourDataFrameName>.printSchema()
 <yourDataFrameName>.registerTempTable("<yourTableName>")
+<yourDataFrameNameLimit3> = sqlContext.sql("select * from <yourTableName> limit 3")
+for row in <yourDataFrameNameLimit3>.take(3):
+   print row
+   print "*" * 25
