@@ -1,0 +1,17 @@
+jdbcurl = "jdbc:db2://<yourHostName>:50000/BLUDB"
+jdbcuser = "<yourUserID>"
+jdbcpwd = "<yourPassword>"
+mode = "append"
+"""
+Modes:
+append: Append contents of this :class:DataFrame to existing data.
+overwrite: Overwrite existing data.
+ignore: Silently ignore this operation if data already exists.
+error (default case): Throw an exception if data already exists.
+"""
+properties = {
+    "user": jdbcuser,
+    "password": jdbcpwd
+}
+<yourDataFrame.write.jdbc(url=jdbcurl, table="<yourTableName>", mode=mode, properties=properties)
+# If this fails, the table may need to be pre-defined in dashDB

@@ -1,2 +1,6 @@
-<yourDataFrameName> = sqlContext.read.format('jdbc').options(url='jdbc:db2://<yourHostName>:50000/BLUDB', dbtable='<yourUsername>.<yourDBName>', user='<yourUsername>', password='<yourPassword>').load()
-<yourDataFrameName>.take(2)
+<yourDataFrame> = sqlContext.read.\
+format('jdbc').\
+options(url='jdbc:db2://<yourHostName>:50000/BLUDB',
+   dbtable='<yourTableName>', user='<yourUserId>', password='<yourPassword').load() 
+<yourDataFrame>.printSchema()
+<yourDataFrame>.count()
