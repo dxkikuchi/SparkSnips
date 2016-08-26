@@ -1,0 +1,6 @@
+The following installs, configures and runs Zeppelin on a BigInsights cluster 
+without requiring root privileges. Two reasons for running Zeppelin may be:
+•to provide data scientists with notebook functionality
+•to provide example code in the form of notebooks for services such as hbase
+
+https://github.com/IBM-Bluemix/BigInsights-on-Apache-Hadoop/tree/master/examples/Zeppelin
