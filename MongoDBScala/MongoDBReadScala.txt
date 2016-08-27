@@ -1,0 +1,16 @@
+%Addjar https://github.com/dxkikuchi/SparkSnips/raw/master/MongoDBScala/unityjdbc.jar
+%Addjar https://github.com/dxkikuchi/SparkSnips/raw/master/MongoDBScala/mongo-java-driver-2.13.3.jar
+import mongodb.jdbc.MongoDriver
+import org.apache.spark.sql.SQLContext
+
+val sqlContext = new SQLContext(sc)
+
+val url = "jdbc:mongo://<yourMongoDBHostname>:<yourPortNumber>/<yourMongoDB>"
+val dbtable = "<yourCollection>"
+val user = "<yourUserID>"
+val password = "<yourPassword>"
+val options = scala.collection.Map("url" -> url,"driver" -> "mongodb.jdbc.MongoDriver","dbtable" ->dbtable,"user"->user,"password"->password)
+
+val <yourDataFrame> = sqlContext.read.format("jdbc").options(options)
+val <yourTableDF> = <yourDataFrame>.load()
+<yourTableDF>.show()
