@@ -17,5 +17,5 @@ credentials['region'] = '<yourRegion>'
 credentials['user_id'] = '<yourUserID>'
 credentials['password'] = '<yourPassword>'
 set_hadoop_config(credentials)
-<yourRDD> = sc.textFile("swift://<yourObjectStoreContainer.spark/<yourFiles>")
+<yourRDD> = sc.textFile("swift://<yourObjectStoreContainer>.spark/<yourFiles>")
 <yourRDD>.take(3)
