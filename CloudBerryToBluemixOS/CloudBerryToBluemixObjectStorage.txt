@@ -1,0 +1,11 @@
+Download CloudBerry Explorer for OpenStack Storage
+http://www.cloudberrylab.com/download-thanks.aspx?prod=cbosfree&src=ms
+
+Click on 'File' -> 'New OpenStack Account'.
+The 'User name:' is 'username' in the credentials.
+The 'Api key:' is 'password' in the credentials.
+The 'Authentication Service' is 'auth_url' in the credentials.
+Select 'Keystone version:' of 3
+The 'Domain name' is 'domainName' in the credentials.
+
+Then click 'Test Connection' and if successful, click on OK.
