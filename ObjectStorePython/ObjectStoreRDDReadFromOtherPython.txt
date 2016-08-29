@@ -1,7 +1,7 @@
 def set_hadoop_config(credentials):
    prefix = "fs.swift.service." + credentials['name'] 
    hconf = sc._jsc.hadoopConfiguration()
-   hconf.set(prefix + ".auth.url", credentials['auth_url']+'/v2.0/tokens')
+   hconf.set(prefix + ".auth.url", credentials['auth_url']+'/v3/auth/tokens')
    hconf.set(prefix + ".auth.endpoint.prefix", "endpoints")
    hconf.set(prefix + ".tenant", credentials['project_id'])
    hconf.set(prefix + ".username", credentials['user_id'])
@@ -10,12 +10,12 @@ def set_hadoop_config(credentials):
    hconf.set(prefix + ".region", credentials['region'])
    hconf.setBoolean(prefix + ".public", True)
 credentials = {}
-credentials['name'] = 'ObjectStorage'
+credentials['name'] = 'spark'
 credentials['auth_url'] = '<yourAuthURL>'
 credentials['project_id'] = '<yourProjectID>'
 credentials['region'] = '<yourRegion>'
 credentials['user_id'] = '<yourUserID>'
 credentials['password'] = '<yourPassword>'
 set_hadoop_config(credentials)
-<yourRDD> = sc.textFile("swift://notebooks.spark/<yourFiles>")
-<yourRdd>.take(3)
+<yourRDD> = sc.textFile("swift://<yourObjectStoreContainer.spark/<yourFiles>")
+<yourRDD>.take(3)
